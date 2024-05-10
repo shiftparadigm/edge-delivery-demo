@@ -25,6 +25,7 @@ export const calcEnvironment = () => {
 
 function buildConfigURL(environment) {
   const env = environment || calcEnvironment();
+  console.log(env);
   const configURL = new URL(`${window.location.origin}/configs.json`);
   // configURL.searchParams.set('sheet', env);
   console.log(configURL);
@@ -53,5 +54,5 @@ export const getConfigValue = async (configParam, environment) => {
   const configJSON = await getConfigForEnvironment(env);
   const configElements = JSON.parse(configJSON).data;
   console.log(configElements);
-  return configElements.find((c) => { console.log(c, configParam); return c.key === configParam; })?.value;
+  return configElements.find((c) => c.key === configParam)?.value;
 };
