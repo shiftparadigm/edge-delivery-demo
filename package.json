@@ -8,7 +8,9 @@
     "lint:css": "stylelint blocks/**/*.css styles/*.css",
     "lint": "npm run lint:js && npm run lint:css",
     "start": "aem up --print-index",
-    "postinstall": "node postinstall.js"
+    "install:dropins": "node postinstall.js",
+    "postinstall": "npm run install:dropins",
+    "postupdate": "npm run install:dropins"
   },
   "repository": {
     "type": "git",
@@ -32,7 +34,13 @@
     "stylelint-config-standard": "36.0.0"
   },
   "dependencies": {
+    "@adobe/auth-token": "^1.0.0-beta.1",
     "@adobe/magento-storefront-event-collector": "^1.8.0",
-    "@adobe/magento-storefront-events-sdk": "^1.8.0"
+    "@adobe/magento-storefront-events-sdk": "^1.8.0",
+    "@dropins/storefront-cart": "^0.1.1",
+    "@dropins/storefront-checkout": "^0.1.0-alpha31",
+    "@dropins/storefront-order-confirmation": "^0.1.0-alpha20",
+    "@dropins/storefront-pdp": "^0.2.2-alpha27",
+    "@dropins/tools": "^0.22.0"
   }
 }

@@ -115,6 +115,7 @@ export async function performCatalogServiceQuery(query, variables) {
     'x-api-key': await getConfigValue('commerce-x-api-key'),
   };
 
+  console.log(await getConfigValue('commerce-endpoint'));
   const apiCall = new URL(await getConfigValue('commerce-endpoint'));
   apiCall.searchParams.append('query', query.replace(/(?:\r\n|\r|\n|\t|[\s]{4})/g, ' ')
     .replace(/\s\s+/g, ' '));
@@ -212,7 +213,7 @@ export function renderPrice(product, format, html = (strings, ...values) => stri
 
     if (finalMin.amount.value !== regularMin.amount.value) {
       return html`<${Fragment}>
-      <span class="price-final">${format(finalMin.amount.value)} - ${format(regularMin.amount.value)}</span> 
+      <span class="price-final">${format(finalMin.amount.value)} - ${format(regularMin.amount.value)}</span>
     </${Fragment}>`;
     }
 

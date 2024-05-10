@@ -1,17 +1,18 @@
 import {
-  sampleRUM,
   buildBlock,
-  loadHeader,
-  loadFooter,
+  decorateBlocks,
   decorateButtons,
   decorateIcons,
   decorateSections,
-  decorateBlocks,
   decorateTemplateAndTheme,
-  waitForLCP,
   loadBlocks,
   loadCSS,
+  loadFooter,
+  loadHeader,
+  sampleRUM,
+  waitForLCP,
 } from './aem.js';
+import initializeDropins from './dropins.js';
 
 const LCP_BLOCKS = [
   'product-list-page',
@@ -83,6 +84,7 @@ export function decorateMain(main) {
  */
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
+  await initializeDropins();
   decorateTemplateAndTheme();
 
   window.adobeDataLayer = window.adobeDataLayer || [];
