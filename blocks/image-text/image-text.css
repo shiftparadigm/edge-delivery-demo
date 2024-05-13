@@ -11,6 +11,13 @@
     .image-text > div {
         grid-template-columns: none;
     }
+    .image-text .image-text-image-wrap {
+        order: 1;
+    }
+    
+    .image-text .image-text-text-wrap {
+        order: 2;
+    }
 }
 
 .image-text.dark {
