@@ -1,0 +1,40 @@
+.image-text {
+    margin-bottom: 2em;
+}
+
+.image-text > div {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4em;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1em 0;
+}
+
+.image-text > div > div {
+}
+
+@media (width < 1024px) {
+    .image-text > div {
+        grid-template-columns: none;
+    }
+}
+
+.image-text.dark {
+    background-color: var(--color-primary-dark);
+    color: var(--color-primary-light);
+}
+
+.image-text.gradient-blue {
+    background-image: var(--color-gradient-blue-inverted);
+    color: var(--color-primary-light);
+}
+
+.image-text-image-wrap {
+
+}
+
+.image-text-text-wrap {
+
+}
