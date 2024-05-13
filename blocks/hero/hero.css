@@ -18,8 +18,8 @@ main .hero-container {
 
 .hero h1 {
   color: var(--color-primary-light);
-  font: var(--type-headline-1-font);
-  letter-spacing: var(--type-headline-1-letter-spacing);
+  font: var(--type-display-1-font);
+  letter-spacing: var(--type-display-1-letter-spacing);
   margin-left: 0.25em;
 }
 @media screen and (width >= 1024px) {

@@ -1,18 +1,10 @@
-.image-text {
-    margin-bottom: 2em;
-}
-
 .image-text > div {
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4em;
     max-width: 1200px;
     margin: auto;
-    padding: 1em 0;
-}
-
-.image-text > div > div {
+    padding: 2em 0;
 }
 
 @media (width < 1024px) {
@@ -32,9 +24,25 @@
 }
 
 .image-text-image-wrap {
-
+    width: 100%;
 }
 
 .image-text-text-wrap {
+    padding: 2em;
+}
 
+.image-text-text-wrap h2,
+.image-text-text-wrap h3 {
+    font: var(--type-display-2-font);
+    letter-spacing: var(--type-display-2-letter-spacing);
+}
+
+@media (width >= 1024px) {
+    .image-text > div:first-of-type .image-text-text-wrap {
+        max-width: 400px;
+    }
+
+    .image-text > div:last-of-type .image-text-text-wrap {
+        margin-left: 4em;
+    }
 }
