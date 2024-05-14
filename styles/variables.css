@@ -16,6 +16,7 @@
  .dropin-design.dropin-design {
   --color-primary-dark: #0F232D;
   --color-primary-light: #fff;
+  
    /* Adobe Commerce Dropin design tokens */
    --color-brand-300: #6d6d6d;
    --color-brand-500: #454545;

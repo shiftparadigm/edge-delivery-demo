@@ -22,6 +22,7 @@ main .hero-container {
   letter-spacing: var(--type-display-1-letter-spacing);
   margin-left: 0.25em;
 }
+
 @media screen and (width >= 1024px) {
   .hero h1 {
     max-width: 60%;
