@@ -6,11 +6,14 @@
 .two-column-text > div:has(div + div),
 .two-column-text > div:first-of-type > div,
 .two-column-text > div > div picture {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: var(--max-width);
     padding: var(--spacing-padding-2) 0;
+}
+
+.two-column-text > div > div picture {
+    display: block;
 }
 
 .two-column-text.half > div:has(div + div) {
