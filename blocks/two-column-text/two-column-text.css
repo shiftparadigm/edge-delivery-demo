@@ -14,6 +14,7 @@
 
 .two-column-text > div > div picture {
     display: block;
+    padding: 0;
 }
 
 .two-column-text.half > div:has(div + div) {
