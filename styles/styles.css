@@ -195,11 +195,7 @@
  main button.button.secondary:hover {
    color: var(--color-brand-600);
  }
- 
- main input:hover {
-   border: 1px solid var(--color-neutral-700);
- }
- 
+
  main blockquote {
    font-style: italic;
    margin: 3rem;
@@ -232,24 +228,6 @@
  .icon img {
    height: 100%;
    width: 100%;
- }
- 
- /* sections */
- main .section {
-   /* padding: var(--spacing-large) var(--spacing-small); */
- }
- 
- @media (width >=600px) {
-   main .section {
-     /* padding: var(--spacing-large) var(--spacing-big); */
-   }
- }
- 
- @media (width >=900px) {
-   main .section > div {
-     /* max-width: 1200px;
-     margin: auto; */
-   }
  }
  
  /* section metadata */

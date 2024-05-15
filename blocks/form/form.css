@@ -1,0 +1,48 @@
+.form-wrapper {
+    background: var(--color-gradient-blue);
+    color: var(--color-primary-light);
+}
+
+.form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    min-height: 600px;
+    padding: var(--spacing-padding-2) 0;
+}
+
+.form > div {
+    display: grid;
+    gap: var(--spacing-padding-1);
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (width < 1200px) {
+    .form > div {
+        grid-template-columns: none;
+        padding-left: var(--spacing-padding-2);
+        padding-right: var(--spacing-padding-2);
+    }
+}
+
+.form .form-target {
+    padding-top: var(--spacing-padding-3);
+}
+
+.form .form-target label {
+    display: block;
+}
+
+.form .form-target label input {
+    font: var(--type-body-1-default-font);
+    height: 3rem;
+    margin: var(--spacing-padding-1) 0;
+    width: 100%;
+}
+
+.form .form-target button[type="submit"] {
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+    font: var(--type-button-1-font);
+    letter-spacing: var(--type-button-1-letter-spacing);
+}

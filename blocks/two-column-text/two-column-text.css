@@ -1,13 +1,16 @@
-.two-column-text {
+.two-column-text > div:has(div + div) {
+    display: grid;
+    gap: var(--spacing-padding-2);
+}
+
+.two-column-text > div:has(div + div),
+.two-column-text > div:first-of-type > div,
+.two-column-text > div > div picture {
+    display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: var(--max-width);
     padding: var(--spacing-padding-2) 0;
-}
-
-.two-column-text > div:has(div + div) {
-    align-items: center;
-    display: grid;
 }
 
 .two-column-text.half > div:has(div + div) {
@@ -23,8 +26,14 @@
 }
 
 @media screen and (width < 1200px) {
-    .two-column-text {
+    .two-column-text > div:has(div + div),
+    .two-column-text > div:first-of-type {
         padding-left: var(--spacing-padding-2);
         padding-right: var(--spacing-padding-2);
     }
+}
+
+.two-column-text.gradient-headline > div:first-of-type {
+    background: var(--color-gradient-blue);
+    color: var(--color-primary-light);
 }
