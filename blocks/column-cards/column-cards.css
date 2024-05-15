@@ -1,0 +1,44 @@
+.column-cards-wrapper {
+    background-color: var(--color-primary-dark);
+    padding: var(--spacing-padding-2) 0;
+}
+
+.column-cards {
+    color: var(--color-primary-light);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.column-cards-main-heading-wrap h2,
+.column-cards-main-heading-wrap h3,
+.column-cards-main-heading-wrap h4 {
+    margin: var(--spacing-padding-1) 0 0;
+}
+
+.column-cards .column-cards-text-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-padding-1);
+}
+
+/* CSS variables not working in media queries */
+@media screen and (width < 1200px) {
+    .column-cards {
+        padding: 0 var(--spacing-padding-2);
+    }
+}
+
+@media screen and (width < 800px) {
+    .column-cards .column-cards-text-wrap {
+        flex-direction: column;
+    }
+}
+
+.column-cards .column-cards-text-wrap a.button {
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+    font: var(--type-button-1-font);
+    letter-spacing: var(--type-button-1-letter-spacing);
+}

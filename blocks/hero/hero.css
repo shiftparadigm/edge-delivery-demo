@@ -8,24 +8,47 @@ main .hero-container {
 }
 
 .hero {
-  display: grid;
+  color: var(--color-primary-light);
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
-  min-height: 600px;
+  max-width: var(--max-width);
+  min-height: 500px;
+  padding-left: 0.25em;
   position: relative;
 }
 
+.hero > div > div {
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  padding-top: var(--spacing-padding-4);
+}
+
 .hero h1 {
-  color: var(--color-primary-light);
   font: var(--type-display-1-font);
   letter-spacing: var(--type-display-1-letter-spacing);
-  margin-left: 0.25em;
+  margin-bottom: auto;
+  margin-top: 0;
+}
+
+.hero p {
+  font: var(--type-headline-2-default-font);
+  letter-spacing: var(--type-headline-2-letter-spacing);
+  margin-top: auto;
+}
+
+@media screen and (width < 1200px) {
+    .hero {
+        padding: 0 var(--spacing-padding-2);
+    }
 }
 
 @media screen and (width >= 1024px) {
   .hero h1 {
     max-width: 60%;
+  }
+
+  .hero p {
+    max-width: 45%;
   }
 }
 

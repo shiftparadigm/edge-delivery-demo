@@ -18,7 +18,7 @@ header nav {
   align-items: center;
   gap: 0 32px;
   margin: auto;
-  max-width: 1264px;
+  max-width: var(--max-width);
   height: var(--nav-height);
   padding: 0 16px;
   font-family: var(--type-base-font-family);
@@ -287,13 +287,14 @@ header nav .nav-tools-panel--show {
 }
 
 header nav .nav-tools {
-  grid-area: tools;
+  /* grid-area: tools;
   display: flex;
-  gap: 10px;
+  gap: 10px; */
+  display: none;
 }
 
 header nav .nav-tools-wrapper > button {
-  color: var(--color-brand-700);
+  color: var(--color-primary-light);
   background: transparent;
   padding: 10px;
   border: unset;
