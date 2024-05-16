@@ -23,6 +23,10 @@
     gap: var(--spacing-padding-1);
 }
 
+.column-cards img {
+    max-width: none;
+}
+
 /* CSS variables not working in media queries */
 @media screen and (width < 1200px) {
     .column-cards {
