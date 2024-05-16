@@ -17,6 +17,14 @@
     padding: 0;
 }
 
+.two-column-text.data-point-right h2 {
+    max-width: 50%;
+}
+
+.two-column-text.data-point-right h2 + p {
+    max-width: 75%;
+}
+
 .two-column-text.half > div:has(div + div) {
     grid-template-columns: 1fr 1fr;
 }
@@ -29,11 +37,23 @@
     grid-template-columns: 33% 66%;
 }
 
+.two-column-text.data-point-right h3 {
+    font: var(--type-display-1-font);
+    margin-bottom: 0;
+}
+
 @media screen and (width < 1200px) {
     .two-column-text > div:has(div + div),
     .two-column-text > div:first-of-type {
         padding-left: var(--spacing-padding-2);
         padding-right: var(--spacing-padding-2);
+    }
+}
+
+@media screen and (width < 800px) {
+    .two-column-text h2,
+    .two-column-text h2 + p {
+        max-width: 100%;
     }
 }
 
