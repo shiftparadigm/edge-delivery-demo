@@ -18,25 +18,23 @@
 }
 
 .column-cards .column-cards-text-wrap {
-    display: flex;
-    flex-direction: row;
+    display: grid;
     gap: var(--spacing-padding-1);
-}
-
-.column-cards img {
-    max-width: none;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
 }
 
 /* CSS variables not working in media queries */
 @media screen and (width < 1200px) {
     .column-cards {
+        box-sizing: border-box;
         padding: 0 var(--spacing-padding-2);
     }
 }
 
 @media screen and (width < 800px) {
     .column-cards .column-cards-text-wrap {
-        flex-direction: column;
+        display: block;
     }
 }
 
