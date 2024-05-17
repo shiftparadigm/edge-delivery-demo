@@ -18,10 +18,14 @@
   --color-primary-light: #fff;
   --color-alternate-light: #F1F6F8;
   --color-accent: #FFE600;
+  --color-border-separator: #ADB7BC;
+  --spacing-padding-05: 0.5em;
   --spacing-padding-1: 1em;
   --spacing-padding-2: 2em;
   --spacing-padding-3: 3em;
   --spacing-padding-4: 4em;
+  --spacing-padding-5: 5em;
+  --spacing-padding-6: 6em;
   --max-width: 1200px;
   
    /* Adobe Commerce Dropin design tokens */

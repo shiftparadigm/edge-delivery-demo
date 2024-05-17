@@ -3,7 +3,6 @@
   margin-right: auto;
   max-width: var(--max-width);
   min-height: 500px;
-  padding-left: 0.25em;
   position: relative;
 }
 
@@ -37,7 +36,7 @@ main .hero.gradient-blue {
 }
 
 @media screen and (width < 1200px) {
-    .hero {
+    .hero > div {
         padding: 0 var(--spacing-padding-2);
     }
 }

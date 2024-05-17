@@ -25,6 +25,7 @@
     
     .image-text .image-text-text-wrap {
         order: 2;
+        padding: 0;
     }
 }
 
@@ -61,7 +62,7 @@
         max-width: 400px;
     }
 
-    .image-text > div:last-of-type .image-text-text-wrap {
+    .image-text:not(.text-left) > div:last-of-type .image-text-text-wrap {
         margin-left: var(--spacing-padding-4);
     }
 }

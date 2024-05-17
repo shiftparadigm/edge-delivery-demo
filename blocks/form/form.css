@@ -13,12 +13,13 @@
 
 .form > div {
     display: grid;
-    gap: var(--spacing-padding-1);
+    gap: var(--spacing-padding-6);
     grid-template-columns: 1fr 1fr;
 }
 
 @media screen and (width < 1200px) {
     .form > div {
+        gap: 0;
         grid-template-columns: none;
         padding-left: var(--spacing-padding-2);
         padding-right: var(--spacing-padding-2);

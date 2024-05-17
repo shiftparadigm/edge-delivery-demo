@@ -13,8 +13,8 @@
 
 .two-column-feature-highlight > div:has(div + div) p {
     align-items: center;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 68px 1fr;
     font: var(--type-highlight-font);
     letter-spacing: var(--type-highlight-letter-spacing);
 }
@@ -27,5 +27,12 @@
     .two-column-feature-highlight {
         padding-left: var(--spacing-padding-2);
         padding-right: var(--spacing-padding-2);
+    }
+}
+
+@media screen and (width < 680px) {
+    .two-column-feature-highlight > div:has(div + div) {
+        gap: 0;
+        grid-template-columns: none;
     }
 }
