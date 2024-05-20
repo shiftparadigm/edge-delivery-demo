@@ -29,9 +29,12 @@ export default function decorate(block) {
       labels.forEach((label) => {
         label.classList.add('shift-label');
         const input = label.parentNode.querySelector('input[type="text"], input[type="email"], textarea');
-        input.classList.add('shift-input');
-        const labelText = input && input.getAttribute('placeholder');
-        label.textContent = labelText;
+
+        if (input) {
+          input.classList.add('shift-input');
+          const labelText = input.getAttribute('placeholder');
+          label.textContent = labelText;
+        }
       });
     });
 
