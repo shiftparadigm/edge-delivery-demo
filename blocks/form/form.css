@@ -44,6 +44,10 @@
     border: none !important;
 }
 
+.form-target .mktoForm input[type="checkbox"]:focus + label::before {
+    outline: 1px solid var(--color-primary-dark);
+}
+
 .form-target .mktoForm .shift-input::placeholder {
     opacity: 0;
 }
@@ -75,4 +79,8 @@
 .form-target .mktoForm button.mktoButton:hover {
     background-color: var(--color-accent) !important;
     border: none !important;
+}
+
+.form-target .by-marketo-form-confirmation {
+    color: var(--color-primary-light);
 }
