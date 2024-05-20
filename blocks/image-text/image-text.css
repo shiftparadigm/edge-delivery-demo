@@ -49,6 +49,7 @@
 
 .image-text-text-wrap {
     padding: var(--spacing-padding-2);
+    padding-left: 0;
 }
 
 .image-text-text-wrap h2,
@@ -65,4 +66,11 @@
     .image-text:not(.text-left) > div:last-of-type .image-text-text-wrap {
         margin-left: var(--spacing-padding-4);
     }
+}
+
+.image-text .image-text-text-wrap a.button {
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+    font: var(--type-button-1-font);
+    letter-spacing: var(--type-button-1-letter-spacing);
 }
