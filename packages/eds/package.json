@@ -1,0 +1,19 @@
+{
+  "name": "eds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "shift-aem",
+    "build": "shift-aem-build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc -b"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@shiftparadigm/eds-core": "0.1.0-alpha.4",
+    "@shiftparadigm/eds-dev-tools": "0.1.0-alpha.3"
+  }
+}

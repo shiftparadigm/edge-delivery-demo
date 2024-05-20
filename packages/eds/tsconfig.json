@@ -1,0 +1,10 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"allowJs": true,
+		"noEmit": true,
+		"target": "esnext",
+		"rootDir": "src"
+	},
+	"include": ["src"]
+}
