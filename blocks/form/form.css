@@ -30,15 +30,35 @@
     padding-top: var(--spacing-padding-3);
 }
 
-.form .form-target label {
-    display: block;
-}
-
-.form .form-target label input {
+.form-target .mktoForm .shift-input {
+    border-radius: 0;
     font: var(--type-body-1-default-font);
     height: 3rem;
     margin: var(--spacing-padding-1) 0;
+    padding: var(--spacing-padding-1);
+    text-align: left;
     width: 100%;
+}
+
+.form-target .mktoForm .shift-input:focus {
+    border: none !important;
+}
+
+.form-target .mktoForm .shift-input::placeholder {
+    opacity: 0;
+}
+
+.mktoForm label.shift-label,
+.mktoForm .mktoRequiredField label.mktoLabel.shift-label {
+    color: var(--color-primary-light);
+    display: block;
+    font: var(--type-body-1-default-font);
+    font-weight: 300;
+    width: auto !important;
+}
+
+.mktoForm .mktoCheckboxList > label {
+    color: var(--color-primary-light);
 }
 
 .form .form-target button[type="submit"] {
@@ -46,4 +66,13 @@
     color: var(--color-primary-dark);
     font: var(--type-button-1-font);
     letter-spacing: var(--type-button-1-letter-spacing);
+}
+
+.form-target .mktoForm button.mktoButton {
+    border: none;
+}
+
+.form-target .mktoForm button.mktoButton:hover {
+    background-color: var(--color-accent) !important;
+    border: none !important;
 }

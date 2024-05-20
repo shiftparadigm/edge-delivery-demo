@@ -1,56 +1,40 @@
-// eslint-disable-next-line
-import '//go.shiftparadigm.com/js/forms2/js/forms2.min.js';
-
-// const loadScript = (url, callback, type) => {
-//   const head = document.querySelector('head');
-//   const script = document.createElement('script');
-//   script.src = url;
-//   if (type) {
-//     script.setAttribute('type', type);
-//   }
-//   if (callback) script.onload = callback;
-//   head.append(script);
-//   console.log(head);
-//   return script;
-// };
-
-// const formAction = '';
-// const formMarkup = `
-//     <form action=${formAction}>
-//         <label>
-//             First Name
-//             <input type="text" name="firstName" />
-//         </label>
-//         <label>
-//             Last Name
-//             <input type="text" name="lastName" />
-//         </label>
-//         <label>
-//             Company
-//             <input type="text" name="company" />
-//         </label>
-//         <label>
-//             Title
-//             <input type="text" name="title" />
-//         </label>
-//         <label>
-//             Company Email
-//             <input type="email" name="email" />
-//         </label>
-//         <button type="submit" class="button">Contact Us</button>
-//     </form>
-// `;
+const loadScript = (url, callback, type) => {
+  const head = document.querySelector('head');
+  const script = document.createElement('script');
+  script.src = url;
+  if (type) {
+    script.setAttribute('type', type);
+  }
+  if (callback) script.onload = callback;
+  head.append(script);
+  return script;
+};
 
 export default function decorate(block) {
-  //   const formTarget = block.querySelector('.form div > div:last-of-type');
-  //   formTarget.classList.add('form-target');
-  //   formTarget.innerHTML = formMarkup;
+  const formTarget = block.querySelector('.form div > div:last-of-type');
+  formTarget.classList.add('form-target');
 
   const form = '<form id="mktoForm_2894"></form>';
-  block.innerHTML += form;
+  formTarget.innerHTML += form;
 
-  //   loadScript('//go.shiftparadigm.com/js/forms2/js/forms2.min.js');
+  loadScript('//go.shiftparadigm.com/js/forms2/js/forms2.min.js', () => {
+    // eslint-disable-next-line no-undef
+    MktoForms2.loadForm('//go.shiftparadigm.com', '230-YBS-585', 2894);
 
-  // eslint-disable-next-line no-undef
-  MktoForms2.loadForm('//go.shiftparadigm.com', '230-YBS-585', 2894);
+    // manipulate DOM after script has injected form
+    const observer = new MutationObserver((mutationList) => {
+      const labels = mutationList[0].target.querySelectorAll('.mktoForm label.mktoLabel');
+
+      // Display labels to match design and fix missing accessible names
+      labels.forEach((label) => {
+        label.classList.add('shift-label');
+        const input = label.parentNode.querySelector('input[type="text"], input[type="email"], textarea');
+        input.classList.add('shift-input');
+        const labelText = input && input.getAttribute('placeholder');
+        label.textContent = labelText;
+      });
+    });
+
+    observer.observe(formTarget, { childList: true, subtree: true });
+  });
 }
