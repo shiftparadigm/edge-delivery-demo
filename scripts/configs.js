@@ -24,11 +24,12 @@ export const calcEnvironment = () => {
 };
 
 function buildConfigURL(environment) {
+  // eslint-disable-next-line
   const env = environment || calcEnvironment();
-  console.log(env);
+  // console.log(env);
   const configURL = new URL(`${window.location.origin}/configs.json`);
   // configURL.searchParams.set('sheet', env);
-  console.log(configURL);
+  // console.log(configURL);
   return configURL;
 }
 
@@ -53,6 +54,6 @@ export const getConfigValue = async (configParam, environment) => {
   const env = environment || calcEnvironment();
   const configJSON = await getConfigForEnvironment(env);
   const configElements = JSON.parse(configJSON).data;
-  console.log(configElements);
+  // console.log(configElements);
   return configElements.find((c) => c.key === configParam)?.value;
 };
