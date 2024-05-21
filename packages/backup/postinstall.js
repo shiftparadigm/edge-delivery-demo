@@ -4,6 +4,8 @@ const path = require('path');
 // Define the dropins folder
 const dropinsDir = path.join('scripts', '__dropins__');
 
+return;
+
 // Remove existing dropins folder
 if (fs.existsSync(dropinsDir)) {
 	fs.rmSync(dropinsDir, { recursive: true });
