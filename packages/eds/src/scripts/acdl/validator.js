@@ -1,6 +1,8 @@
+import Ajv from 'ajv';
+
 export default class AcdlValidator {
 	constructor() {
-		this.ajv = new window.ajv2020();
+		this.ajv = new Ajv();
 	}
 	handle(item, event) {
 		const schema = event ? item.event : Object.keys(item)[0];

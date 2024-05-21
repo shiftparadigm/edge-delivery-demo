@@ -23,6 +23,7 @@
     "@dropins/tools": "^0.22.0",
     "@shiftparadigm/eds-core": "0.1.0-alpha.4",
     "@shiftparadigm/eds-dev-tools": "0.1.0-alpha.4",
+    "ajv": "^8.13.0",
     "preact": "^10.22.0"
   }
 }
