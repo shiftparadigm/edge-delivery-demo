@@ -13,7 +13,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@dropins/storefront-cart": "^0.1.1",
+    "@dropins/storefront-checkout": "^0.1.0-alpha31",
+    "@dropins/storefront-order-confirmation": "^0.1.0-alpha20",
+    "@dropins/storefront-pdp": "^0.2.2-alpha27",
+    "@dropins/tools": "^0.22.0",
     "@shiftparadigm/eds-core": "0.1.0-alpha.4",
-    "@shiftparadigm/eds-dev-tools": "0.1.0-alpha.3"
+    "@shiftparadigm/eds-dev-tools": "0.1.0-alpha.4"
   }
 }

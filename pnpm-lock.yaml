@@ -99,12 +99,27 @@ importers:
 
   packages/eds:
     dependencies:
+      '@dropins/storefront-cart':
+        specifier: ^0.1.1
+        version: 0.1.1
+      '@dropins/storefront-checkout':
+        specifier: ^0.1.0-alpha31
+        version: 0.1.0-alpha31
+      '@dropins/storefront-order-confirmation':
+        specifier: ^0.1.0-alpha20
+        version: 0.1.0-alpha20
+      '@dropins/storefront-pdp':
+        specifier: ^0.2.2-alpha27
+        version: 0.2.2
+      '@dropins/tools':
+        specifier: ^0.22.0
+        version: 0.22.0
       '@shiftparadigm/eds-core':
         specifier: 0.1.0-alpha.4
         version: 0.1.0-alpha.4
       '@shiftparadigm/eds-dev-tools':
-        specifier: 0.1.0-alpha.3
-        version: 0.1.0-alpha.3(@adobe/aem-cli@16.3.15)(@types/node@20.12.12)(typescript@5.4.5)
+        specifier: 0.1.0-alpha.4
+        version: 0.1.0-alpha.4(@adobe/aem-cli@16.3.15)(@types/node@20.12.12)(typescript@5.4.5)
 
 packages:
 
@@ -1033,8 +1048,8 @@ packages:
     resolution: {integrity: sha512-/3XS1iu/2X7zhhon1jGR8hAebOCoMo/1upMPG+hfCLWv8besI783xwdFA2+R0IlC6853u4hghfPnhxjAlJkaIA==}
     dev: false
 
-  /@shiftparadigm/eds-dev-tools@0.1.0-alpha.3(@adobe/aem-cli@16.3.15)(@types/node@20.12.12)(typescript@5.4.5):
-    resolution: {integrity: sha512-VXi1aAWD78nybXuiqUylKexLNQ7AULjs+VT5w9ea+uLfTfs70mDfWVEPqtAEKpoRzH23BnVk/i2lkA6KwhaSuQ==}
+  /@shiftparadigm/eds-dev-tools@0.1.0-alpha.4(@adobe/aem-cli@16.3.15)(@types/node@20.12.12)(typescript@5.4.5):
+    resolution: {integrity: sha512-GteEJo9ZI0T/8ml4fkDd6q6WolySAAqlbaBPro6HvveLdOMxQwsHBm3JPIW7sMNxt4Ec2vrDKHlvMKqIOTMwzA==}
     hasBin: true
     peerDependencies:
       '@adobe/aem-cli': ^16.3.15
