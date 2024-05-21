@@ -1,33 +1,27 @@
 # Shift Paradigm AEM EDS Commerce Site
 
+**If this is in the root of your repository, you are on the wrong branch; switch
+to `main` or a branch based on it. In that case, this branch is being built from
+another branch.**
+
 This project uses Adobe Edge Delivery Services with Adobe Commerce.
 
 ## Environments
-- Preview: https://main--aem-commerce--PrincipleStudios.hlx.page/
-- Live: https://main--aem-commerce--PrincipleStudios.hlx.live/
+- Preview: https://{{branch}}--aem-commerce--PrincipleStudios.hlx.page/
+- Live: https://{{branch}}--aem-commerce--PrincipleStudios.hlx.live/
 
-## Installation
+## Local testing
 
-```sh
-npm i
-```
-
-## Linting
-
-```sh
-npm run lint
-```
-
-## Local development
-
-1. Clone this repository: https://github.com/PrincipleStudios/aem-commerce
-1. Install the [AEM Sidekick Chrome extension](https://chromewebstore.google.com/detail/aem-sidekick/ccfggkjabjahcjoljmgmklhpaccedipo)
-1. Install the [AEM CLI](https://github.com/adobe/aem-cli): `npm install -g @adobe/aem-cli`
-1. Install dependencies: `npm install`
-1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`) or run `npm start`
-1. Open the `aem-commerce` directory in your favorite IDE and start coding :)
+1. Clone this repository.
+1. Start AEM Proxy: `npx @adobe/aem-cli up` (opens your browser at `http://localhost:3000`) or run `npm start`
 
 
-```sh
-npm start
-```
+## Pre-built dependencies
+
+AEM Edge Delivery boilerplate comes with a lot of pre-built dependencies. In this repository, we have:
+
+- [Product listing pages](public/scripts/widgets/search.js), which appears
+  to be built from https://github.com/adobe/storefront-product-listing-page
+- [Storefront search box](public/scripts/widgets/LiveSearchAutocomplete.js),
+  which looks like it is a version of
+  [@magento/storefront-search-as-you-type](https://www.npmjs.com/package/@magento/storefront-search-as-you-type)
