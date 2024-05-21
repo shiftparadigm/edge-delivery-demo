@@ -1,6 +1,6 @@
 import {
   h, Component, Fragment, render, createRef,
-} from '../../scripts/preact.js';
+} from 'preact';
 import htm from '../../scripts/htm.js';
 import ProductList from './ProductList.js';
 import FacetList from './FacetList.js';

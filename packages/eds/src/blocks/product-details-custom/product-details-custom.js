@@ -2,7 +2,7 @@
 /* eslint-disable class-methods-use-this */
 import {
   Component, Fragment, h, render,
-} from '../../scripts/preact.js';
+} from 'preact';
 
 import htm from '../../scripts/htm.js';
 import Carousel from './ProductDetailsCarousel.js';

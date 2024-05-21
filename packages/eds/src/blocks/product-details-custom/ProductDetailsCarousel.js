@@ -1,6 +1,6 @@
 import {
   h, Component, Fragment,
-} from '../../scripts/preact.js';
+} from 'preact';
 import htm from '../../scripts/htm.js';
 import Icon from './Icon.js';
 

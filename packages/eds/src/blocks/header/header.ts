@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import '@shiftparadigm/eds-core/blocks/header/header.css';
 // export { default } from '@shiftparadigm/eds-core/blocks/header/header';
@@ -25,11 +25,10 @@ function closeOnEscape(e: KeyboardEvent) {
 		const navSectionExpanded = navSections?.querySelector(
 			'[aria-expanded="true"]',
 		);
-		if (navSectionExpanded && isDesktop.matches) {
-			// eslint-disable-next-line no-use-before-define
+		if (navSectionExpanded && isDesktop.matches && navSections) {
 			toggleAllNavSections(navSections);
 			// navSectionExpanded?.focus();
-		} else if (!isDesktop.matches) {
+		} else if (!isDesktop.matches && nav && navSections) {
 			// eslint-disable-next-line no-use-before-define
 			toggleMenu(nav, navSections);
 			nav?.querySelector('button')?.focus();
@@ -40,10 +39,10 @@ function closeOnEscape(e: KeyboardEvent) {
 function openOnKeydown(e: KeyboardEvent) {
 	const focused = document.activeElement;
 	const isNavDrop = focused?.className === 'nav-drop';
-	if (isNavDrop && (e.code === 'Enter' || e.code === 'Space')) {
+	if (isNavDrop && (e.code === 'Enter' || e.code === 'Space') && focused) {
 		const dropExpanded = focused.getAttribute('aria-expanded') === 'true';
 		// eslint-disable-next-line no-use-before-define
-		toggleAllNavSections(focused.closest('.nav-sections'));
+		toggleAllNavSections(focused.closest('.nav-sections')!);
 		focused.setAttribute('aria-expanded', dropExpanded ? 'false' : 'true');
 	}
 }
@@ -57,7 +56,7 @@ function focusNavSection() {
  * @param {Element} sections The container element
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
  */
-function toggleAllNavSections(sections, expanded = false) {
+function toggleAllNavSections(sections: Element, expanded = false) {
 	// sections
 	// 	.querySelectorAll('.nav-sections .default-content-wrapper > ul > li')
 	// 	.forEach((section) => {
@@ -71,7 +70,7 @@ function toggleAllNavSections(sections, expanded = false) {
  * @param {Element} navSections The nav sections within the container element
  * @param {*} forceExpanded Optional param to force nav expand behavior when not null
  */
-function toggleMenu(nav, navSections, forceExpanded = null) {
+function toggleMenu(nav: Element, navSections: Element, forceExpanded = null) {
 	// const expanded = forceExpanded !== null
 	//   ? !forceExpanded
 	//   : nav.getAttribute('aria-expanded') === 'true';
@@ -116,7 +115,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
  */
-export default async function decorate(block) {
+export default async function decorate(block: Element) {
 	// load nav as fragment
 	// const navMeta = getMetadata('nav');
 	// const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';

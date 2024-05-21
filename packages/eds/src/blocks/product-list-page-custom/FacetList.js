@@ -1,7 +1,7 @@
 /* eslint-disable max-classes-per-file */
 import {
   h, Component, createRef,
-} from '../../scripts/preact.js';
+} from 'preact';
 import htm from '../../scripts/htm.js';
 
 const html = htm.bind(h);

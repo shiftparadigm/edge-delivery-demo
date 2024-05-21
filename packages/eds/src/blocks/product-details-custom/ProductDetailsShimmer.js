@@ -1,6 +1,6 @@
 import {
   h, Fragment,
-} from '../../scripts/preact.js';
+} from 'preact';
 import htm from '../../scripts/htm.js';
 import Sidebar from './ProductDetailsSidebar.js';
 import Carousel from './ProductDetailsCarousel.js';
