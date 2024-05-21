@@ -3,6 +3,4 @@
 /packages/backup
 /packages/eds/src/scripts/htm.js
 /packages/eds/src/scripts/acdl
-/packages/eds/src/scripts/commerce-events-collector.js
-/packages/eds/src/scripts/commerce-events-sdk.js
 /packages/eds/src/scripts/widgets/**/*

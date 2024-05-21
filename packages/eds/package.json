@@ -13,6 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@adobe/adobe-client-data-layer": "^2.0.2",
+    "@adobe/magento-storefront-event-collector": "^1.8.0",
+    "@adobe/magento-storefront-events-sdk": "^1.8.0",
     "@dropins/storefront-cart": "^0.1.1",
     "@dropins/storefront-checkout": "^0.1.0-alpha31",
     "@dropins/storefront-order-confirmation": "^0.1.0-alpha20",

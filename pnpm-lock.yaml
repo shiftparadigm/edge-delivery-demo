@@ -99,6 +99,15 @@ importers:
 
   packages/eds:
     dependencies:
+      '@adobe/adobe-client-data-layer':
+        specifier: ^2.0.2
+        version: 2.0.2
+      '@adobe/magento-storefront-event-collector':
+        specifier: ^1.8.0
+        version: 1.8.1
+      '@adobe/magento-storefront-events-sdk':
+        specifier: ^1.8.0
+        version: 1.8.1
       '@dropins/storefront-cart':
         specifier: ^0.1.1
         version: 0.1.1

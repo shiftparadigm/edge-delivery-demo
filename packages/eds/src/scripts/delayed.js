@@ -35,5 +35,5 @@ window.adobeDataLayer.push(
 );
 
 // Load events SDK and collector
-import('./commerce-events-sdk.js');
-import('./commerce-events-collector.js');
+import('@adobe/magento-storefront-events-sdk');
+import('@adobe/magento-storefront-event-collector');
