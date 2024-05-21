@@ -149,7 +149,7 @@ async function loadLazy(doc) {
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
 
-  await import('./acdl/adobe-client-data-layer.min.js');
+  await import('./acdl/adobe-client-data-layer.min');
   if (sessionStorage.getItem('acdl:debug')) {
     import('./acdl/validate.js');
   }

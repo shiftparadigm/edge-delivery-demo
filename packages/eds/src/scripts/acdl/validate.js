@@ -1,5 +1,5 @@
-await import('./ajv2020.min.js');
-const { default: AcdlValidator } = await import('./validator.min.js');
+await import('./ajv2020.min');
+const { default: AcdlValidator } = await import('./validator.min');
 
 const validator = new AcdlValidator();
 
