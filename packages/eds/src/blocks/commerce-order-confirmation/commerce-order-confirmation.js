@@ -14,15 +14,15 @@ import { render as provider } from '@dropins/storefront-order-confirmation/rende
 import OrderConfirmation from '@dropins/storefront-order-confirmation/containers/OrderConfirmation.js';
 
 export default async function decorate(block) {
-  // Initialize Drop-ins
-  initializers.register(orderConfirmation.initialize, {});
+	// Initialize Drop-ins
+	initializers.register(orderConfirmation.initialize, {});
 
-  const params = new URLSearchParams(window.location.search);
-  const token = params.get('orderRef');
+	const params = new URLSearchParams(window.location.search);
+	const token = params.get('orderRef');
 
-  return provider.render(OrderConfirmation, {
-    token,
-    routeHome: () => '/',
-    routeSupport: () => '/support',
-  })(block);
+	return provider.render(OrderConfirmation, {
+		token,
+		routeHome: () => '/',
+		routeSupport: () => '/support',
+	})(block);
 }

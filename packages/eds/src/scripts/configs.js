@@ -6,41 +6,41 @@
  * @returns {string} - environment identifier (dev, stage or prod'.
  */
 export const calcEnvironment = () => {
-  const { href } = window.location;
-  let environment = 'prod';
-  if (href.includes('.hlx.page')) {
-    environment = 'stage';
-  }
-  if (href.includes('localhost')) {
-    environment = 'dev';
-  }
+	const { href } = window.location;
+	let environment = 'prod';
+	if (href.includes('.hlx.page')) {
+		environment = 'stage';
+	}
+	if (href.includes('localhost')) {
+		environment = 'dev';
+	}
 
-  const environmentFromConfig = window.sessionStorage.getItem('environment');
-  if (environmentFromConfig && environment !== 'prod') {
-    return environmentFromConfig;
-  }
+	const environmentFromConfig = window.sessionStorage.getItem('environment');
+	if (environmentFromConfig && environment !== 'prod') {
+		return environmentFromConfig;
+	}
 
-  return environment;
+	return environment;
 };
 
 function buildConfigURL(environment) {
-  // eslint-disable-next-line
-  const env = environment || calcEnvironment();
-  // console.log(env);
-  const configURL = new URL(`${window.location.origin}/configs.json`);
-  // configURL.searchParams.set('sheet', env);
-  // console.log(configURL);
-  return configURL;
+	// eslint-disable-next-line
+	const env = environment || calcEnvironment();
+	// console.log(env);
+	const configURL = new URL(`${window.location.origin}/configs.json`);
+	// configURL.searchParams.set('sheet', env);
+	// console.log(configURL);
+	return configURL;
 }
 
 const getConfigForEnvironment = async (environment) => {
-  const env = environment || calcEnvironment();
-  let configJSON = window.sessionStorage.getItem(`config:${env}`);
-  if (!configJSON) {
-    configJSON = await fetch(buildConfigURL(env)).then((res) => res.text());
-    window.sessionStorage.setItem(`config:${env}`, configJSON);
-  }
-  return configJSON;
+	const env = environment || calcEnvironment();
+	let configJSON = window.sessionStorage.getItem(`config:${env}`);
+	if (!configJSON) {
+		configJSON = await fetch(buildConfigURL(env)).then((res) => res.text());
+		window.sessionStorage.setItem(`config:${env}`, configJSON);
+	}
+	return configJSON;
 };
 
 /**
@@ -51,9 +51,9 @@ const getConfigForEnvironment = async (environment) => {
  * @returns {Promise<string|undefined>} - The value of the configuration parameter, or undefined.
  */
 export const getConfigValue = async (configParam, environment) => {
-  const env = environment || calcEnvironment();
-  const configJSON = await getConfigForEnvironment(env);
-  const configElements = JSON.parse(configJSON).data;
-  // console.log(configElements);
-  return configElements.find((c) => c.key === configParam)?.value;
+	const env = environment || calcEnvironment();
+	const configJSON = await getConfigForEnvironment(env);
+	const configElements = JSON.parse(configJSON).data;
+	// console.log(configElements);
+	return configElements.find((c) => c.key === configParam)?.value;
 };

@@ -15,39 +15,39 @@ import { render as provider } from '@dropins/storefront-checkout/render.js';
 import Checkout from '@dropins/storefront-checkout/containers/Checkout.js';
 
 export default async function decorate(block) {
-  // If cartId is cached in session storage, use
-  // otherwise, checkout drop-in will look for one in the event-bus
-  const cartId = sessionStorage.getItem('DROPINS_CART_ID') || '';
+	// If cartId is cached in session storage, use
+	// otherwise, checkout drop-in will look for one in the event-bus
+	const cartId = sessionStorage.getItem('DROPINS_CART_ID') || '';
 
-  // Initialize Drop-ins
-  initializers.register(checkout.initialize, {});
+	// Initialize Drop-ins
+	initializers.register(checkout.initialize, {});
 
-  // Listen for order confirmation and redirect to order confirmation page
-  events.on('checkout/order', (data) => {
-    const orderRef = encodeURIComponent(data.token);
-    window.location.replace(`/order-confirmation?orderRef=${orderRef}`);
-  });
+	// Listen for order confirmation and redirect to order confirmation page
+	events.on('checkout/order', (data) => {
+		const orderRef = encodeURIComponent(data.token);
+		window.location.replace(`/order-confirmation?orderRef=${orderRef}`);
+	});
 
-  return provider.render(Checkout, {
-    cartId,
-    routeHome: () => '/',
-    routeCart: () => '/cart',
-    slots: {
-      PaymentMethods: async (context) => {
-        context.addPaymentMethodHandler('checkmo', {
-          render: (ctx, element) => {
-            if (element) {
-              // clear the element first
-              element.innerHTML = '';
-            }
+	return provider.render(Checkout, {
+		cartId,
+		routeHome: () => '/',
+		routeCart: () => '/cart',
+		slots: {
+			PaymentMethods: async (context) => {
+				context.addPaymentMethodHandler('checkmo', {
+					render: (ctx, element) => {
+						if (element) {
+							// clear the element first
+							element.innerHTML = '';
+						}
 
-            // Optionally, create and render some custom content here.
-            // const $content = document.createElement('div');
-            // $content.innerText = 'Custom Check / Money order handler';
-            // ctx.appendHTMLElement($content);
-          },
-        });
-      },
-    },
-  })(block);
+						// Optionally, create and render some custom content here.
+						// const $content = document.createElement('div');
+						// $content.innerText = 'Custom Check / Money order handler';
+						// ctx.appendHTMLElement($content);
+					},
+				});
+			},
+		},
+	})(block);
 }

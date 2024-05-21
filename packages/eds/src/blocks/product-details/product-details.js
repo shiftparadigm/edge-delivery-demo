@@ -19,70 +19,70 @@ import { getSkuFromUrl } from '../../scripts/commerce.js';
 import { getConfigValue } from '../../scripts/configs.js';
 
 export default async function decorate(block) {
-  // Initialize Drop-ins
-  initializers.register(product.initialize, {});
+	// Initialize Drop-ins
+	initializers.register(product.initialize, {});
 
-  // Set Fetch Endpoint (Service)
-  product.setEndpoint(await getConfigValue('commerce-endpoint'));
+	// Set Fetch Endpoint (Service)
+	product.setEndpoint(await getConfigValue('commerce-endpoint'));
 
-  // Set Fetch Headers (Service)
-  product.setFetchGraphQlHeaders({
-    'Content-Type': 'application/json',
-    'Magento-Environment-Id': await getConfigValue('commerce-environment-id'),
-    'Magento-Website-Code': await getConfigValue('commerce-website-code'),
-    'Magento-Store-View-Code': await getConfigValue('commerce-store-view-code'),
-    'Magento-Store-Code': await getConfigValue('commerce-store-code'),
-    'Magento-Customer-Group': await getConfigValue('commerce-customer-group'),
-    'x-api-key': await getConfigValue('commerce-x-api-key'),
-  });
+	// Set Fetch Headers (Service)
+	product.setFetchGraphQlHeaders({
+		'Content-Type': 'application/json',
+		'Magento-Environment-Id': await getConfigValue('commerce-environment-id'),
+		'Magento-Website-Code': await getConfigValue('commerce-website-code'),
+		'Magento-Store-View-Code': await getConfigValue('commerce-store-view-code'),
+		'Magento-Store-Code': await getConfigValue('commerce-store-code'),
+		'Magento-Customer-Group': await getConfigValue('commerce-customer-group'),
+		'x-api-key': await getConfigValue('commerce-x-api-key'),
+	});
 
-  // Render Containers
+	// Render Containers
 
-  return productRenderer.render(ProductDetails, {
-    sku: getSkuFromUrl(),
-    carousel: {
-      controls: 'dots', // 'thumbnailsColumn', 'thumbnailsRow', 'dots'
-      mobile: true,
-    },
-    slots: {
-      Actions: (ctx) => {
-        // Add to Cart Button
-        ctx.appendButton((next, state) => {
-          const adding = state.get('adding');
-          return {
-            text: adding ? 'Adding to Cart' : 'Add to Cart',
-            icon: 'Cart',
-            variant: 'primary',
-            disabled: adding || !next.data.inStock,
-            onClick: async () => {
-              try {
-                state.set('adding', true);
+	return productRenderer.render(ProductDetails, {
+		sku: getSkuFromUrl(),
+		carousel: {
+			controls: 'dots', // 'thumbnailsColumn', 'thumbnailsRow', 'dots'
+			mobile: true,
+		},
+		slots: {
+			Actions: (ctx) => {
+				// Add to Cart Button
+				ctx.appendButton((next, state) => {
+					const adding = state.get('adding');
+					return {
+						text: adding ? 'Adding to Cart' : 'Add to Cart',
+						icon: 'Cart',
+						variant: 'primary',
+						disabled: adding || !next.data.inStock,
+						onClick: async () => {
+							try {
+								state.set('adding', true);
 
-                if (!next.valid) {
-                  // eslint-disable-next-line no-console
-                  console.warn('Invalid product', next.values);
-                  return;
-                }
+								if (!next.valid) {
+									// eslint-disable-next-line no-console
+									console.warn('Invalid product', next.values);
+									return;
+								}
 
-                await addProductsToCart([{ ...next.values }]);
-              } catch (error) {
-                // eslint-disable-next-line no-console
-                console.warn('Error adding product to cart', error);
-              } finally {
-                state.set('adding', false);
-              }
-            },
-          };
-        });
+								await addProductsToCart([{ ...next.values }]);
+							} catch (error) {
+								// eslint-disable-next-line no-console
+								console.warn('Error adding product to cart', error);
+							} finally {
+								state.set('adding', false);
+							}
+						},
+					};
+				});
 
-        // Add to Wishlist Button
-        // ctx.appendButton(() => ({
-        //   icon: 'Heart',
-        //   variant: 'secondary',
-        //   text: 'Add to Wishlist',
-        //   onClick: () => console.debug('Add to Wishlist', ctx.data),
-        // }));
-      },
-    },
-  })(block);
+				// Add to Wishlist Button
+				// ctx.appendButton(() => ({
+				//   icon: 'Heart',
+				//   variant: 'secondary',
+				//   text: 'Add to Wishlist',
+				//   onClick: () => console.debug('Add to Wishlist', ctx.data),
+				// }));
+			},
+		},
+	})(block);
 }
