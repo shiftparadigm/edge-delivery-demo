@@ -127,8 +127,8 @@ importers:
         specifier: 0.1.0-alpha.4
         version: 0.1.0-alpha.4
       '@shiftparadigm/eds-dev-tools':
-        specifier: 0.1.0-alpha.4
-        version: 0.1.0-alpha.4(@adobe/aem-cli@16.3.15)(@types/node@20.12.12)(typescript@5.4.5)
+        specifier: 0.1.0-alpha.5
+        version: 0.1.0-alpha.5(@adobe/aem-cli@16.3.15)(@types/node@20.12.12)(typescript@5.4.5)
       ajv:
         specifier: ^8.13.0
         version: 8.13.0
@@ -4865,8 +4865,8 @@ packages:
     resolution: {integrity: sha512-/3XS1iu/2X7zhhon1jGR8hAebOCoMo/1upMPG+hfCLWv8besI783xwdFA2+R0IlC6853u4hghfPnhxjAlJkaIA==}
     dev: false
 
-  /@shiftparadigm/eds-dev-tools@0.1.0-alpha.4(@adobe/aem-cli@16.3.15)(@types/node@20.12.12)(typescript@5.4.5):
-    resolution: {integrity: sha512-GteEJo9ZI0T/8ml4fkDd6q6WolySAAqlbaBPro6HvveLdOMxQwsHBm3JPIW7sMNxt4Ec2vrDKHlvMKqIOTMwzA==}
+  /@shiftparadigm/eds-dev-tools@0.1.0-alpha.5(@adobe/aem-cli@16.3.15)(@types/node@20.12.12)(typescript@5.4.5):
+    resolution: {integrity: sha512-YdpphgcJL/kwNzC+88qGzZAuC4+e6CPRmQJXORZIxoi4NX3lQenBI+NVEDoAis3qyQorM+H6Ms90ksv3HO0pPQ==}
     hasBin: true
     peerDependencies:
       '@adobe/aem-cli': ^16.3.15
