@@ -1,0 +1,8 @@
+**/node_modules/
+*/dist/
+.config/
+
+**/package.json
+/pnpm-lock.yaml
+/packages/eds/public/tools/**
+/packages/eds/public/helix-importer-ui/**
