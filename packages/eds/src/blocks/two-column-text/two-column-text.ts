@@ -1,3 +1,5 @@
+import './two-column-text.css';
+
 export default function decorate(block: Element) {
 	const fullSpanPicture = block.querySelector('div > picture');
 	if (fullSpanPicture) fullSpanPicture.classList.add('full-span-picture');

@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/no-extraneous-dependencies */
+import './commerce-order-confirmation.css';
 
 // Drop-in Tools
 import { initializers } from '@dropins/tools/initializer.js';

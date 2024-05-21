@@ -294,8 +294,8 @@ header nav .nav-tools-panel--show {
 
 header nav .nav-tools {
 	/* grid-area: tools;
-  display: flex;
-  gap: 10px; */
+	display: flex;
+	gap: 10px; */
 	display: none;
 }
 

@@ -1,4 +1,5 @@
 /* eslint-disable no-underscore-dangle */
+import './product-recommendations.css';
 import { performCatalogServiceQuery } from '../../scripts/commerce.js';
 import { getConfigValue } from '../../scripts/configs.js';
 

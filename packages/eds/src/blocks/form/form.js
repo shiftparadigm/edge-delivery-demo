@@ -1,3 +1,5 @@
+import './form.css';
+
 const loadScript = (url, callback, type) => {
 	const head = document.querySelector('head');
 	const script = document.createElement('script');

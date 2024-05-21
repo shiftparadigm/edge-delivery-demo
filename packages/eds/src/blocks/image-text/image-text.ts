@@ -1,3 +1,5 @@
+import './image-text.css';
+
 export default function decorate(block: Element) {
 	const { firstElementChild } = block.firstElementChild || {};
 

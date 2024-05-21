@@ -1,3 +1,4 @@
+import './column-cards.css';
 export default function decorate(block: Element) {
 	const { firstElementChild } = block;
 	const divTree = firstElementChild?.children;

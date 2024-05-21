@@ -2,6 +2,7 @@ import { h, Component, Fragment, render, createRef } from 'preact';
 import htm from '../../scripts/htm.js';
 import ProductList from './ProductList.js';
 import FacetList from './FacetList.js';
+import './product-list-page-custom.css';
 import { readBlockConfig, sampleRUM } from '../../scripts/aem.js';
 import {
 	priceFieldsFragment,

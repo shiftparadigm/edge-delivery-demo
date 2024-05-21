@@ -1,3 +1,4 @@
+import './product-teaser.css';
 import { readBlockConfig } from '../../scripts/aem.js';
 import {
 	performCatalogServiceQuery,

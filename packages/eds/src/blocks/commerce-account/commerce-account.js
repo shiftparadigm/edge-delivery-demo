@@ -1,3 +1,4 @@
+import './commerce-account.css';
 import { readBlockConfig } from '../../scripts/aem.js';
 
 export default function decorate(block) {

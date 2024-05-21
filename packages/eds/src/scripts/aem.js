@@ -675,9 +675,6 @@ async function loadBlock(block) {
 		block.dataset.blockStatus = 'loading';
 		const { blockName } = block.dataset;
 		try {
-			const cssLoaded = loadCSS(
-				`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`,
-			);
 			const decorationComplete = new Promise((resolve) => {
 				(async () => {
 					try {
@@ -694,7 +691,7 @@ async function loadBlock(block) {
 					resolve();
 				})();
 			});
-			await Promise.all([cssLoaded, decorationComplete]);
+			await Promise.all([decorationComplete]);
 		} catch (error) {
 			// eslint-disable-next-line no-console
 			console.log(`failed to load block ${blockName}`, error);

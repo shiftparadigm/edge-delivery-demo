@@ -1,6 +1,7 @@
 import { readBlockConfig } from '../../scripts/aem.js';
 import { fetchIndex, loadFragment } from '../../scripts/scripts.js';
 import { getSkuFromUrl } from '../../scripts/commerce.js';
+import './enrichment.css';
 
 export default async function decorate(block) {
 	const { type, position } = readBlockConfig(block);

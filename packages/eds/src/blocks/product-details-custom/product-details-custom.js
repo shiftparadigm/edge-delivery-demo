@@ -6,6 +6,7 @@ import htm from '../../scripts/htm.js';
 import Carousel from './ProductDetailsCarousel.js';
 import Sidebar from './ProductDetailsSidebar.js';
 import ProductDetailsShimmer from './ProductDetailsShimmer.js';
+import './product-details-custom.css';
 import {
 	getProduct,
 	getSkuFromUrl,

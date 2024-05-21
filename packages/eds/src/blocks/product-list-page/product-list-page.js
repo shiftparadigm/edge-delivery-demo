@@ -1,5 +1,6 @@
 import { loadScript, readBlockConfig } from '../../scripts/aem.js';
 import { getConfigValue } from '../../scripts/configs.js';
+import './product-list-page.css';
 
 export default async function decorate(block) {
 	const { category, type } = readBlockConfig(block);

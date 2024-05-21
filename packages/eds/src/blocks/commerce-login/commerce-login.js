@@ -1,4 +1,5 @@
 import { readBlockConfig } from '../../scripts/aem.js';
+import './commerce-login.css';
 
 export default function decorate(block) {
 	const config = readBlockConfig(block);

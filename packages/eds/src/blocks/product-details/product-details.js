@@ -18,6 +18,8 @@ import ProductDetails from '@dropins/storefront-pdp/containers/ProductDetails.js
 import { getSkuFromUrl } from '../../scripts/commerce.js';
 import { getConfigValue } from '../../scripts/configs.js';
 
+import './product-details.css';
+
 export default async function decorate(block) {
 	// Initialize Drop-ins
 	initializers.register(product.initialize, {});
