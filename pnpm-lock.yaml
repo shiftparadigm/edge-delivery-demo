@@ -135,6 +135,9 @@ importers:
       preact:
         specifier: ^10.22.0
         version: 10.22.0
+      vite:
+        specifier: ^5.2.11
+        version: 5.2.11(@types/node@20.12.12)
 
   packages/tools-picker:
     dependencies:

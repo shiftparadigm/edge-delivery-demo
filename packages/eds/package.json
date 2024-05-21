@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "shift-aem",
     "build": "shift-aem-build",
@@ -24,6 +25,7 @@
     "@shiftparadigm/eds-core": "0.1.0-alpha.4",
     "@shiftparadigm/eds-dev-tools": "0.1.0-alpha.4",
     "ajv": "^8.13.0",
-    "preact": "^10.22.0"
+    "preact": "^10.22.0",
+    "vite": "^5.2.11"
   }
 }

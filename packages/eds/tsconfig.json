@@ -4,7 +4,8 @@
 		"allowJs": true,
 		"outDir": "dist",
 		"target": "esnext",
-		"rootDir": "src"
+		"rootDir": "src",
+		"types": ["vite/client"]
 	},
 	"include": ["src"]
 }

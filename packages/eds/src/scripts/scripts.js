@@ -156,7 +156,7 @@ async function loadLazy(doc) {
 
 	await import('@adobe/adobe-client-data-layer');
 	if (sessionStorage.getItem('acdl:debug')) {
-		import('./acdl/validate.js');
+		import('./acdl/validate');
 	}
 
 	sampleRUM('lazy');
