@@ -46,7 +46,7 @@ const handleSubmission = (mktoForm: MarketoForm, successMessage: string) => {
 			.getFormElem()
 			.parent()
 			.html(
-				`<div class="by-marketo-form-confirmation"><p>${successMessage}</p></div>`,
+				`<div class="by-marketo-form-confirmation">${successMessage}</div>`,
 			);
 		return false;
 	}
@@ -95,9 +95,14 @@ export default function decorate(block: HTMLElement) {
 	const formTarget = block.querySelector('.form div > div:last-of-type');
 	formTarget?.classList.add('form-target');
 
-	const formSuccessElement = formTarget?.querySelector('p');
-	const formSuccessMessage = formSuccessElement?.textContent;
-	formSuccessElement && (formSuccessElement.style.display = 'none');
+	let formSuccessMessage = '';
+	const formSuccessContent = formTarget?.querySelectorAll('p');
+
+	formSuccessContent &&
+		Array.from(formSuccessContent).forEach((paragraph) => {
+			formSuccessMessage += paragraph?.toString();
+			paragraph.remove();
+		});
 
 	const form = '<form id="mktoForm_2894"></form>';
 	formTarget && (formTarget.innerHTML += form);
@@ -105,7 +110,8 @@ export default function decorate(block: HTMLElement) {
 	loadScript('//go.shiftparadigm.com/js/forms2/js/forms2.min.js', () =>
 		handleScriptLoaded(
 			formTarget,
-			formSuccessMessage?.toString() || 'We have your submission!',
+			formSuccessMessage?.trim().toString() ||
+				'<p>We have your submission!</p>',
 		),
 	);
 }
