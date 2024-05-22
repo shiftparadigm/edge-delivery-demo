@@ -100,7 +100,7 @@ export default function decorate(block: HTMLElement) {
 
 	formSuccessContent &&
 		Array.from(formSuccessContent).forEach((paragraph) => {
-			formSuccessMessage += paragraph?.toString();
+			formSuccessMessage += paragraph?.outerHTML;
 			paragraph.remove();
 		});
 
