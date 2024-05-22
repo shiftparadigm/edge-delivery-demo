@@ -46,7 +46,7 @@ const handleSubmission = (mktoForm: MarketoForm, successMessage: string) => {
 			.getFormElem()
 			.parent()
 			.html(
-				`<div class="by-marketo-form-confirmation">${successMessage}</div>`,
+				`<div class="by-marketo-form-confirmation"><p>${successMessage}</p></div>`,
 			);
 		return false;
 	}
@@ -96,7 +96,7 @@ export default function decorate(block: HTMLElement) {
 	formTarget?.classList.add('form-target');
 
 	const formSuccessElement = formTarget?.querySelector('p');
-	const formSuccessMessage = formSuccessElement?.cloneNode();
+	const formSuccessMessage = formSuccessElement?.textContent;
 	formSuccessElement && (formSuccessElement.style.display = 'none');
 
 	const form = '<form id="mktoForm_2894"></form>';
@@ -105,7 +105,7 @@ export default function decorate(block: HTMLElement) {
 	loadScript('//go.shiftparadigm.com/js/forms2/js/forms2.min.js', () =>
 		handleScriptLoaded(
 			formTarget,
-			formSuccessMessage?.toString() || '<p>We have your submission!</p>',
+			formSuccessMessage?.toString() || 'We have your submission!',
 		),
 	);
 }
