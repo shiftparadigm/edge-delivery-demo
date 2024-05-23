@@ -124,11 +124,11 @@ importers:
         specifier: ^0.22.0
         version: 0.22.0
       '@shiftparadigm/eds-core':
-        specifier: 0.1.0-alpha.4
-        version: 0.1.0-alpha.4
+        specifier: 0.1.0-alpha.7
+        version: 0.1.0-alpha.7
       '@shiftparadigm/eds-dev-tools':
-        specifier: 0.1.0-alpha.5
-        version: 0.1.0-alpha.5(@adobe/aem-cli@16.3.15)(@types/node@20.12.12)(typescript@5.4.5)
+        specifier: 0.1.0-alpha.7
+        version: 0.1.0-alpha.7(@adobe/aem-cli@16.3.15)(@shiftparadigm/eds-core@0.1.0-alpha.7)(@types/node@20.12.12)(typescript@5.4.5)
       ajv:
         specifier: ^8.13.0
         version: 8.13.0
@@ -4861,18 +4861,25 @@ packages:
     dev: false
     optional: true
 
-  /@shiftparadigm/eds-core@0.1.0-alpha.4:
-    resolution: {integrity: sha512-/3XS1iu/2X7zhhon1jGR8hAebOCoMo/1upMPG+hfCLWv8besI783xwdFA2+R0IlC6853u4hghfPnhxjAlJkaIA==}
+  /@shiftparadigm/eds-core@0.1.0-alpha.7:
+    resolution: {integrity: sha512-bHmNAgqx3f2YMetwK4h15bwIbqyWjEzTv4THREG80RQxZAoV1QrliPOR2c3c1HFjhJFYMu/qQMDG1aAbUY3hkQ==}
     dev: false
 
-  /@shiftparadigm/eds-dev-tools@0.1.0-alpha.5(@adobe/aem-cli@16.3.15)(@types/node@20.12.12)(typescript@5.4.5):
-    resolution: {integrity: sha512-YdpphgcJL/kwNzC+88qGzZAuC4+e6CPRmQJXORZIxoi4NX3lQenBI+NVEDoAis3qyQorM+H6Ms90ksv3HO0pPQ==}
+  /@shiftparadigm/eds-dev-tools@0.1.0-alpha.7(@adobe/aem-cli@16.3.15)(@shiftparadigm/eds-core@0.1.0-alpha.7)(@types/node@20.12.12)(typescript@5.4.5):
+    resolution: {integrity: sha512-iULuaobKKOn2F6KIYaQiu4QwSnL9Hhe7q5lfHsL6ktjvAF7pNHJdAsJX4358m0OnhWmdQnQuiQ9Kf77fDw+w/g==}
     hasBin: true
     peerDependencies:
       '@adobe/aem-cli': ^16.3.15
+      '@shiftparadigm/eds-core': ^0.1.0-alpha.5
     dependencies:
       '@adobe/aem-cli': 16.3.15
+      '@shiftparadigm/eds-core': 0.1.0-alpha.7
+      chokidar: 3.6.0
+      fast-glob: 3.3.2
+      fs-extra: 11.2.0
       glob: 10.3.15
+      micromatch: 4.0.7
+      picocolors: 1.0.1
       vite: 5.2.11(@types/node@20.12.12)
       vite-plugin-css-injected-by-js: 3.5.1(vite@5.2.11)
       vite-tsconfig-paths: 4.3.2(typescript@5.4.5)(vite@5.2.11)
@@ -5516,6 +5523,13 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       fill-range: 7.0.1
+
+  /braces@3.0.3:
+    resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
+    engines: {node: '>=8'}
+    dependencies:
+      fill-range: 7.1.1
+    dev: false
 
   /browserslist@4.23.0:
     resolution: {integrity: sha512-QW8HiM1shhT2GuzkvklfjcKDiWFXHOeFCIA/huJPwHsslwcydgk7X+z2zXpEijP98UCY7HbubZt5J2Zgvf0CaQ==}
@@ -6577,6 +6591,13 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       to-regex-range: 5.0.1
+
+  /fill-range@7.1.1:
+    resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
+    engines: {node: '>=8'}
+    dependencies:
+      to-regex-range: 5.0.1
+    dev: false
 
   /finalhandler@1.2.0:
     resolution: {integrity: sha512-5uXcUVftlQMFnWC9qu/svkWv3GTd2PfUhK/3PLkYNAe7FbqJMt3515HaxE6eRL74GdsriiwujiawdaB1BpEISg==}
@@ -7664,6 +7685,14 @@ packages:
     dependencies:
       braces: 3.0.2
       picomatch: 2.3.1
+
+  /micromatch@4.0.7:
+    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
+    engines: {node: '>=8.6'}
+    dependencies:
+      braces: 3.0.3
+      picomatch: 2.3.1
+    dev: false
 
   /mime-db@1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
