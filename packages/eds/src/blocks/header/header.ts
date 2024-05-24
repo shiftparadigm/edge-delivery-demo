@@ -8,7 +8,7 @@ import { render as cartProvider } from '@dropins/storefront-cart/render.js';
 
 // Drop-in Tools
 import { events } from '@dropins/tools/event-bus.js';
-import { getMetadata } from '../../scripts/aem.js';
+import { getMetadata } from '@shiftparadigm/eds-core/utils/getMetadata';
 import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width

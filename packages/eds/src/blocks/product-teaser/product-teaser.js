@@ -1,5 +1,5 @@
 import './product-teaser.css';
-import { readBlockConfig } from '../../scripts/aem.js';
+import { readBlockConfig } from '@shiftparadigm/eds-core/utils/readBlockConfig';
 import {
 	performCatalogServiceQuery,
 	renderPrice,

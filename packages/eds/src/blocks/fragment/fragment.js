@@ -5,9 +5,9 @@
  */
 import './fragment.css';
 
-import { decorateMain } from '../../scripts/scripts.js';
+import { decorateMain } from '@shiftparadigm/eds-core/utils/decorateMain';
 
-import { loadBlocks } from '../../scripts/aem.js';
+import { loadBlocks } from '@shiftparadigm/eds-core/utils/loadBlocks';
 
 /**
  * Loads a fragment.

@@ -8,7 +8,6 @@ import {
 	waitForLCP,
 } from './aem.js';
 import { decorateMain } from '@shiftparadigm/eds-core/utils/decorateMain';
-export { decorateMain } from '@shiftparadigm/eds-core/utils/decorateMain';
 import initializeDropins from './dropins.js';
 
 const LCP_BLOCKS = [

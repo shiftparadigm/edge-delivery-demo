@@ -1,5 +1,5 @@
 import './commerce-account.css';
-import { readBlockConfig } from '../../scripts/aem.js';
+import { readBlockConfig } from '@shiftparadigm/eds-core/utils/readBlockConfig';
 
 export default function decorate(block) {
 	const config = readBlockConfig(block);

@@ -1,5 +1,5 @@
 import '@shiftparadigm/eds-core/blocks/footer/footer.css';
-import { getMetadata } from '../../scripts/aem.js';
+import { getMetadata } from '@shiftparadigm/eds-core/utils/getMetadata';
 import { loadFragment } from '../fragment/fragment.js';
 
 /**
