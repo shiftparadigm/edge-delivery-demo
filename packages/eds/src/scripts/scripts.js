@@ -1,13 +1,11 @@
-import {
-	decorateTemplateAndTheme,
-	loadBlocks,
-	loadCSS,
-	loadFooter,
-	loadHeader,
-	sampleRUM,
-	waitForLCP,
-} from './aem.js';
 import { decorateMain } from '@shiftparadigm/eds-core/utils/decorateMain';
+import { decorateTemplateAndTheme } from '@shiftparadigm/eds-core/utils/decorateTemplateAndTheme';
+import { loadBlocks } from '@shiftparadigm/eds-core/utils/loadBlocks';
+import { loadCSS } from '@shiftparadigm/eds-core/utils/loadCSS';
+import { loadFooter } from '@shiftparadigm/eds-core/utils/loadFooter';
+import { loadHeader } from '@shiftparadigm/eds-core/utils/loadHeader';
+import { sampleRUM } from '@shiftparadigm/eds-core/utils/sampleRUM';
+import { waitForLCP } from '@shiftparadigm/eds-core/utils/waitForLCP';
 import initializeDropins from './dropins.js';
 
 const LCP_BLOCKS = [

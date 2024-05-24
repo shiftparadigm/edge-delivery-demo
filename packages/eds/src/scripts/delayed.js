@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-cycle
-import { sampleRUM } from './aem.js';
+import { sampleRUM } from '@shiftparadigm/eds-core/utils/sampleRUM';
 import { getConfigValue } from './configs.js';
 
 // Core Web Vitals RUM collection
