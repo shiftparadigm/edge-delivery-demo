@@ -26,12 +26,13 @@ export default async function initializeDropins() {
 		}
 	});
 
-	// Mount all registered drop-ins
-	if (document.readyState === 'complete') {
-		initializers.mount();
-	} else {
-		window.addEventListener('load', initializers.mount);
-	}
+	// TODO:
+	// // Mount all registered drop-ins
+	// if (document.readyState === 'complete') {
+	// 	initializers.mount();
+	// } else {
+	// 	window.addEventListener('load', initializers.mount);
+	// }
 
 	events.enableLogger(true);
 }

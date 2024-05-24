@@ -1,17 +1,11 @@
-import {
-	buildBlock,
-	decorateBlocks,
-	decorateButtons,
-	decorateIcons,
-	decorateSections,
-	decorateTemplateAndTheme,
-	loadBlocks,
-	loadCSS,
-	loadFooter,
-	loadHeader,
-	sampleRUM,
-	waitForLCP,
-} from './aem.js';
+import { decorateMain } from '@shiftparadigm/eds-core/utils/decorateMain';
+import { decorateTemplateAndTheme } from '@shiftparadigm/eds-core/utils/decorateTemplateAndTheme';
+import { loadBlocks } from '@shiftparadigm/eds-core/utils/loadBlocks';
+import { loadCSS } from '@shiftparadigm/eds-core/utils/loadCSS';
+import { loadFooter } from '@shiftparadigm/eds-core/utils/loadFooter';
+import { loadHeader } from '@shiftparadigm/eds-core/utils/loadHeader';
+import { sampleRUM } from '@shiftparadigm/eds-core/utils/sampleRUM';
+import { waitForLCP } from '@shiftparadigm/eds-core/utils/waitForLCP';
 import initializeDropins from './dropins.js';
 
 const LCP_BLOCKS = [
@@ -23,25 +17,6 @@ const LCP_BLOCKS = [
 	'commerce-account',
 	'commerce-login',
 ]; // add your LCP blocks to the list
-
-/**
- * Builds hero block and prepends to main in a new section.
- * @param {Element} main The container element
- */
-function buildHeroBlock(main) {
-	const h1 = main.querySelector('h1');
-	const picture = main.querySelector('picture');
-	// eslint-disable-next-line no-bitwise
-	if (
-		h1 &&
-		picture &&
-		h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING
-	) {
-		const section = document.createElement('div');
-		section.append(buildBlock('hero', { elems: [picture, h1] }));
-		main.prepend(section);
-	}
-}
 
 /**
  * load fonts.css and set a session storage flag
@@ -57,39 +32,12 @@ async function loadFonts() {
 }
 
 /**
- * Builds all synthetic blocks in a container element.
- * @param {Element} main The container element
- */
-function buildAutoBlocks(main) {
-	try {
-		buildHeroBlock(main);
-	} catch (error) {
-		// eslint-disable-next-line no-console
-		console.error('Auto Blocking failed', error);
-	}
-}
-
-/**
- * Decorates the main element.
- * @param {Element} main The main element
- */
-// eslint-disable-next-line import/prefer-default-export
-export function decorateMain(main) {
-	// hopefully forward compatible button decoration
-	decorateButtons(main);
-	decorateIcons(main);
-	buildAutoBlocks(main);
-	decorateSections(main);
-	decorateBlocks(main);
-}
-
-/**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
 	document.documentElement.lang = 'en';
-	// await initializeDropins();
+	await initializeDropins();
 	decorateTemplateAndTheme();
 
 	window.adobeDataLayer = window.adobeDataLayer || [];

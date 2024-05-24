@@ -3,7 +3,8 @@ import htm from '../../scripts/htm.js';
 import ProductList from './ProductList.js';
 import FacetList from './FacetList.js';
 import './product-list-page-custom.css';
-import { readBlockConfig, sampleRUM } from '../../scripts/aem.js';
+import { readBlockConfig } from '@shiftparadigm/eds-core/utils/readBlockConfig';
+import { sampleRUM } from '@shiftparadigm/eds-core/utils/sampleRUM';
 import {
 	priceFieldsFragment,
 	performCatalogServiceQuery,

@@ -41,7 +41,7 @@ body {
 }
 
 body:not(.appear) {
-	visibility: hidden;
+	display: none;
 }
 
 header {

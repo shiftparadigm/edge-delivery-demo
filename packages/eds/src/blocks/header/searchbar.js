@@ -1,4 +1,4 @@
-import { loadScript } from '../../scripts/aem.js';
+import { loadScript } from '@shiftparadigm/eds-core/utils/loadScript';
 import { getConfigValue } from '../../scripts/configs.js';
 
 (async () => {

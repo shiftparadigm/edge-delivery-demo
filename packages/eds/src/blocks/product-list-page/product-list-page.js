@@ -1,4 +1,5 @@
-import { loadScript, readBlockConfig } from '../../scripts/aem.js';
+import { loadScript } from '@shiftparadigm/eds-core/utils/loadScript';
+import { readBlockConfig } from '@shiftparadigm/eds-core/utils/readBlockConfig';
 import { getConfigValue } from '../../scripts/configs.js';
 import './product-list-page.css';
 

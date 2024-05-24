@@ -1,4 +1,4 @@
-import { readBlockConfig } from '../../scripts/aem.js';
+import { readBlockConfig } from '@shiftparadigm/eds-core/utils/readBlockConfig';
 import { fetchIndex, loadFragment } from '../../scripts/scripts.js';
 import { getSkuFromUrl } from '../../scripts/commerce.js';
 import './enrichment.css';
