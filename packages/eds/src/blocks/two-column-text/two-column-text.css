@@ -52,7 +52,7 @@
 	border-bottom: 1px solid var(--color-border-separator);
 }
 
-@media screen and (width < 1200px) {
+@media screen and (width < 1260px) {
 	.two-column-text > .text-wrapper,
 	.two-column-text > div:first-of-type {
 		padding-left: var(--spacing-padding-2);

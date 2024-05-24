@@ -35,7 +35,7 @@ main .hero.gradient-blue {
 	margin-top: auto;
 }
 
-@media screen and (width < 1200px) {
+@media screen and (width < 1260px) {
 	.hero > div {
 		padding: 0 var(--spacing-padding-2);
 	}

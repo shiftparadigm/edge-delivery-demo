@@ -27,6 +27,7 @@
 	--spacing-padding-5: 5em;
 	--spacing-padding-6: 6em;
 	--max-width: 1200px;
+	--max-text-width: 975px;
 
 	/* Adobe Commerce Dropin design tokens */
 	--color-brand-300: #6d6d6d;

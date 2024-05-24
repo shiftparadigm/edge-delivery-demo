@@ -34,7 +34,7 @@
 }
 
 /* CSS variables not working in media queries */
-@media screen and (width < 1200px) {
+@media screen and (width < 1260px) {
 	.column-cards {
 		box-sizing: border-box;
 		padding: 0 var(--spacing-padding-2);

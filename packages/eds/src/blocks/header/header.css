@@ -24,7 +24,7 @@ header nav {
 	font-family: var(--type-base-font-family);
 }
 
-@media screen and (width < 1200px) {
+@media screen and (width < 1260px) {
 	header nav {
 		padding: 0 var(--spacing-padding-2);
 	}

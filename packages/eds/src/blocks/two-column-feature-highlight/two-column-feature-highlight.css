@@ -23,7 +23,7 @@
 	margin-right: var(--spacing-padding-1);
 }
 
-@media screen and (width < 1200px) {
+@media screen and (width < 1260px) {
 	.two-column-feature-highlight {
 		padding-left: var(--spacing-padding-2);
 		padding-right: var(--spacing-padding-2);
