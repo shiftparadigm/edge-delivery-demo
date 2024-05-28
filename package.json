@@ -17,7 +17,8 @@
     "prettier:fix": "prettier --write \"**/*.{cjs,mjs,js,mts,cts,ts,tsx,yaml,json,css}\"",
     "typecheck": "tsc -b",
     "stylelint": "stylelint \"**/*.css\"",
-    "stylelint:fix": "stylelint \"**/*.css\" --fix"
+    "stylelint:fix": "stylelint \"**/*.css\" --fix",
+    "test": "npx playwright test"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "@types/node": "^20.12.12",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
+    "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
@@ -34,5 +36,8 @@
     "stylelint-config-standard": "^36.0.0",
     "stylelint-prettier": "^5.0.0",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.1"
   }
 }

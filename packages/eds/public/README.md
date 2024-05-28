@@ -7,14 +7,21 @@ another branch.**
 This project uses Adobe Edge Delivery Services with Adobe Commerce.
 
 ## Environments
-- Preview: https://{{branch}}--aem-commerce--PrincipleStudios.hlx.page/
-- Live: https://{{branch}}--aem-commerce--PrincipleStudios.hlx.live/
 
-## Local testing
+- Preview: https://hlx-{{branch}}--aem-commerce--PrincipleStudios.hlx.page/
+- Live: https://hlx-{{branch}}--aem-commerce--PrincipleStudios.hlx.live/
+
+## Local manual testing
 
 1. Clone this repository.
 1. Start AEM Proxy: `npx @adobe/aem-cli up` (opens your browser at `http://localhost:3000`) or run `npm start`
 
+## End-to-end testing
+
+1. Run tests locally with Playwright:
+   `npm test`
+1. Or specify an environment:
+   `ENV=production npm test`
 
 ## Pre-built dependencies
 
