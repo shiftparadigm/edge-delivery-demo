@@ -1,3 +1,8 @@
+.article-byline-wrapper {
+	background-color: var(--color-alternate-light);
+	padding: var(--spacing-padding-2) 0;
+}
+
 .article-byline {
 	margin-left: auto;
 	margin-right: auto;
@@ -7,14 +12,34 @@
 .article-byline > div {
 	display: flex;
 	flex-direction: row;
-	margin: 0 auto;
-	justify-content: center;
+	gap: var(--spacing-padding-1);
+	margin: 0;
+	justify-content: flex-start;
 }
 
 .article-byline > div > div:first-of-type {
 	width: 120px;
 }
 
+.article-byline > div > div:last-of-type {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.article-byline h2 {
+	font: var(--type-body-1-strong-font);
+	margin: 0;
+}
+
 .article-byline p {
-	font: var(--type-body-2-emphasized-font);
+	font: var(--type-body-2-default-font);
+	margin: 0;
+}
+
+@media screen and (width < 1280px) {
+	.article-byline > div {
+		padding-left: var(--spacing-padding-2);
+		padding-right: var(--spacing-padding-2);
+	}
 }
