@@ -128,6 +128,12 @@ export default async function decorate(block: Element) {
 	});
 
 	const navBrand = nav.querySelector('.nav-brand');
+	const navLogo = navBrand?.querySelector('picture');
+	const navLink = document.createElement('a');
+	navLink?.setAttribute('href', '/');
+	navLogo?.parentNode?.insertBefore(navLink, navLogo);
+	navLogo && navLink.appendChild(navLogo);
+
 	const brandLink = navBrand?.querySelector('.button');
 	if (brandLink) {
 		brandLink.className = '';
