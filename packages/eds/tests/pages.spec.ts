@@ -4,7 +4,9 @@ test('homepage loads', async ({ page }) => {
 	await page.goto(`./`);
 
 	// Expect a title "to contain" a substring.
-	await expect(page).toHaveTitle(/Adobe Edge Delivery Services/);
+	const h1 = await page.getByText(/Adobe Edge Delivery Services/);
+
+	await expect(h1).toBeVisible();
 });
 
 test('article page loads', async ({ page }) => {
@@ -14,5 +16,5 @@ test('article page loads', async ({ page }) => {
 		'Marketers Can Have Their Cake and Eat It Too with Adobe Edge Delivery Services',
 	);
 
-	await expect(h1).toBeDefined();
+	await expect(h1).toBeVisible();
 });
