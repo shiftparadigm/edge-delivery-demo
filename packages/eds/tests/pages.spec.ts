@@ -3,9 +3,9 @@ import { test, expect } from '@playwright/test';
 test('homepage loads', async ({ page }) => {
 	await page.goto(`./`);
 
-	// Expect a title "to contain" a substring.
-	const h1 = await page.getByText(/Adobe Edge Delivery Services/);
+	const h1 = await page.getByRole('heading', { level: 1 });
 
+	await expect(h1).toHaveText('Adobe Edge Delivery Services');
 	await expect(h1).toBeVisible();
 });
 
