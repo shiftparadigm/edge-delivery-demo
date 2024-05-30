@@ -1,7 +1,7 @@
 node_modules/
 packages/*/dist/
 packages/*/*.tsbuildinfo
-/test-results/
-/playwright-report/
+/test-results/*
+/playwright-report/*
 /blob-report/
 /playwright/.cache/
