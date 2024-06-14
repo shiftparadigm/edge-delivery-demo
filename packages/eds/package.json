@@ -23,7 +23,7 @@
     "@dropins/storefront-pdp": "^0.2.2-alpha27",
     "@dropins/tools": "^0.22.0",
     "@shiftparadigm/eds-core": "0.1.0-alpha.8",
-    "@shiftparadigm/eds-dev-tools": "0.1.0-alpha.7",
+    "@shiftparadigm/eds-dev-tools": "0.1.0-alpha.10",
     "ajv": "^8.13.0",
     "preact": "^10.22.0",
     "vite": "^5.2.11"

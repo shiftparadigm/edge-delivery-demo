@@ -64,8 +64,8 @@ h3 {
 }
 
 h4 {
-	font: var(--type-headline-1-font);
-	letter-spacing: var(--type-headline-1-letter-spacing);
+	font: var(--type-display-4-font);
+	letter-spacing: var(--type-display-4-letter-spacing);
 }
 
 h5 {
@@ -122,8 +122,9 @@ main pre {
 
 /* links */
 a:not(.dropin-design a) {
-	color: var(--color-brand-500);
+	color: var(--color-primary-dark);
 	font: var(--type-body-1-strong-font);
+	font-weight: 400;
 	letter-spacing: var(--type-body-1-strong-letter-spacing);
 	text-decoration: none;
 }
@@ -248,11 +249,24 @@ main .section .default-content-wrapper {
 	max-width: var(--max-width);
 }
 
+main .section .default-content-wrapper p:first-of-type {
+	margin-top: var(--spacing-padding-4);
+}
+
+main .section .default-content-wrapper p:last-of-type {
+	margin-bottom: var(--spacing-padding-4);
+}
+
 main .section .default-content-wrapper h2,
 main .section .default-content-wrapper h3,
 main .section .default-content-wrapper h4,
 main .section .default-content-wrapper p:not(:has(picture)) {
 	max-width: var(--max-text-width);
+	margin-bottom: 0;
+}
+
+main .section .default-content-wrapper p:not(:has(picture)) {
+	margin-top: var(--spacing-padding-05);
 }
 
 @media screen and (width < 1260px) {

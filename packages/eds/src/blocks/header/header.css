@@ -1,5 +1,10 @@
 /* stylelint-disable selector-class-pattern */
 
+/* avoid flash of unstyled background */
+header.header-wrapper {
+	background-color: var(--color-primary-dark);
+}
+
 /* header and nav layout */
 header .nav-wrapper {
 	background-color: var(--color-primary-dark);

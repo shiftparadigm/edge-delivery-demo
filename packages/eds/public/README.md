@@ -1,15 +1,13 @@
 # Shift Paradigm AEM EDS Commerce Site
 
 **If this is in the root of your repository, you are on the wrong branch; switch
-to `main` or a branch based on it. In that case, this branch is being built from
-another branch.**
+to any `src/` branch. This branch is being built from another branch.**
 
 This project uses Adobe Edge Delivery Services with Adobe Commerce.
 
 ## Environments
-
-- Preview: https://hlx-{{branch}}--aem-commerce--PrincipleStudios.hlx.page/
-- Live: https://hlx-{{branch}}--aem-commerce--PrincipleStudios.hlx.live/
+- Preview: https://{{branch}}--edge-delivery-demo--shiftparadigm.hlx.page/
+- Live: https://{{branch}}--edge-delivery-demo--shiftparadigm.hlx.live/
 
 ## Local manual testing
 

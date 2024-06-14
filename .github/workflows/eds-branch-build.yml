@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/workflows/parts/cache/
+      - uses: ./.github/workflows/parts/branch/
+        id: branch-name
       - name: Install packages
         working-directory: ./packages/eds
         run: |
@@ -24,4 +26,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./packages/eds/dist
-          publish_branch: hlx/${{ github.ref_name }}
+          publish_branch: ${{ steps.branch-name.outputs.result }}
+          exclude_assets: ''
+          enable_jekyll: true
