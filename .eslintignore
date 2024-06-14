@@ -1,6 +1,0 @@
-/packages/eds/public/tools/**
-/packages/eds/public/helix-importer-ui/**
-/packages/backup
-/packages/eds/src/scripts/htm.js
-/packages/eds/src/scripts/acdl
-/packages/eds/src/scripts/widgets/**/*
