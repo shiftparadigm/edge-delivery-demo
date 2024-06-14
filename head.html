@@ -1,4 +1,5 @@
 <script type="module">
+	document.body.innerText = '';
 	const result = new URL(window.location);
 	if (result.host.startsWith('hlx-')) {
 		result.host = result.host.substring(4);
