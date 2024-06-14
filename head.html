@@ -1,6 +1,7 @@
 <script type="module">
-	document.body.innerText = 'If you are seeing this, you are using the wrong URL. Please ensure you are visiting `hlx-` in the subdomain.';
 	const result = new URL(window.location);
-	result.host = 'hlx-' + result.host;
-	window.location = result.href;
+	if (result.host.startsWith('hlx-')) {
+		result.host = result.host.substring(4);
+		window.location = result.href;
+	}
 </script>
