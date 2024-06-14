@@ -1,0 +1,19 @@
+name: 'Computes compiled branch'
+description: 'Computes the compiled branch'
+inputs: {}
+outputs:
+  result:
+    description: "Build branch name"
+    value: ${{ steps.compiled-branch.outputs.result }}
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/github-script@v7
+      id: compiled-branch
+      with:
+        script: |
+          const ref = context.payload.ref;
+          return ref.startsWith('refs/heads/src/') ? ref.split('/').slice(3).join('/')
+            : ref.startsWith('src/') ? ref.split('/').slice(1).join('/')
+            : '';
+        result-encoding: string

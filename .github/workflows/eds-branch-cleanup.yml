@@ -11,6 +11,9 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+      - uses: ./.github/workflows/parts/branch/
+        id: branch-name
       - name: Deploy
+        if: ${{ steps.branch-name.outputs.result != '' }}
         run: |
-          git push origin :hlx/${{ github.event.ref }}
+          git push origin :${{ steps.branch-name.outputs.result }}
